@@ -1,12 +1,18 @@
 """A simple implementation of linear regrassion model
 with visualization using matplotlib"""
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 # Sample Data: House Size (in square feet) and Price (in thousands)
-X = np.array([500, 700, 800, 1000, 1200, 1500]).reshape(-1, 1)  # Features (House Size)
-y = np.array([150, 200, 220, 260, 300, 360])  # Target (House Price)
+
+# Features (House Size)
+X = np.array([500, 700, 800, 1000, 1200, 1500]).reshape(-1, 1)  
+
+ # Target (House Price)
+y = np.array([150, 200, 220, 260, 300, 360]) 
 
 # Create and Train the Model
 model = LinearRegression()
