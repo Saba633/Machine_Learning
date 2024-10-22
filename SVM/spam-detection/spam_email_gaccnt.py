@@ -9,7 +9,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
 
-m_box = mbox(r'D:\Code\Python\ML\All mail Including Spam and Trash.mbox')
+m_box = mbox(r'D:\Code\Python\ML\All mail Including Spam and Trash.mbox') # <---------your file path
 emails = []
 
 for message in m_box:
