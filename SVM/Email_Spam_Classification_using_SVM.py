@@ -26,7 +26,7 @@ def clean_text(text):
     return ' '.join(words)
 
 # Load the mbox file
-m_box = mbox(r'D:\Code\Python\ML\All mail Including Spam and Trash.mbox')
+m_box = mbox(r'D:\Code\Python\ML\All mail Including Spam and Trash.mbox') # <------your file will go here
 emails = []
 
 for message in m_box:
@@ -78,7 +78,7 @@ print(classification_report(y_test, y_pred))
 # Confusion matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
 
-# ------------------- 📊 PLOTTING BOTH GRAPHS IN ONE FIGURE -------------------
+# ------------------- PLOTTING -------------------
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
 # Spam vs Ham distribution (Pie Chart)
