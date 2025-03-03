@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay, roc_curve, auc
 
 # Load dataset
-data = pd.read_csv(r'D:\Code\Python\ML\dataasets\cancer_dataset.csv')
+data = pd.read_csv(r'D:\Code\Python\ML\dataasets\cancer_dataset.csv') # <-- Enter your dataset
 df = pd.DataFrame(data)
 
 # Split features and target
@@ -27,15 +27,15 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy*100:.2f}%")
 
-# 🎯 1️⃣ Decision Tree Visualization
+# Decision Tree Visualization
 fig, axes = plt.subplots(1, 2, figsize=(18, 8))
 
-# 🎯 1️⃣ Decision Tree Visualization
+# Decision Tree Visualization
 plot_tree(model, feature_names=X.columns, class_names=[str(cls) for cls in model.classes_], 
           filled=True, rounded=True, fontsize=8, proportion=True, ax=axes[0])
 axes[0].set_title("Decision Tree Visualization", fontsize=12)
 
-# 🎯 2️⃣ Feature Importance Plot
+# Feature Importance Plot
 importances = model.feature_importances_
 feature_names = X.columns
 
